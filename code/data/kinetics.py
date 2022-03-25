@@ -46,7 +46,7 @@ class Kinetics400(VisionDataset):
 
         classes = list(sorted(list_dir(root)))
         class_to_idx = {classes[i]: i for i in range(len(classes))}
-        
+
         self.samples = make_dataset(self.root, class_to_idx, extensions, is_valid_file=None)
         self.classes = classes
         video_list = [x[0] for x in self.samples]

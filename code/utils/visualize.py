@@ -102,7 +102,7 @@ class Visualize(object):
     def wandb_init(self, model):
         if not self._init:
             self._init = True
-            wandb.init(project="videowalk", group="release", config=self.args)
+            wandb.init(project="trackingwithtransformers", entity="jeffhernandez1995", config=self.args)
             wandb.watch(model)
 
     def log(self, key_vals):
